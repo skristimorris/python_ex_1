@@ -23,11 +23,12 @@
 # This is just a simple example to demonstrate how the start and end
 # breakpoint system works
 # Task: get the user's name with input() and print out Hello <name>
-print("start of part 0") # set breakpoint here
+#print("start of part 0") # set breakpoint here
 # your code here
+user_name = input("Enter your name here")
+print("Hi " + user_name +"!")
 
-
-print("end of 0") # set breakpoint here 
+#print("end of 0") # set breakpoint here 
 '''
 
 
@@ -103,6 +104,14 @@ L = [0, [], [1,2,3,4], [[5],[6,7]], [8,9,10]]
 print(L)
 # your code
 
+#1st attempt - N = [L[0], L[2][1],L[2][2],[[L[3][0][0], L[3][1][0]], L[4][0], L[4][-1]]
+# print(N)
+# -attempted to write out entire list in one line, not sure if this is it but the list within the list is hard to slice. 
+
+a = [L[3][0][0], L[3][1][0]]
+print(a)
+N = [L[0], L[2][1],L[2][2], a, L[4][0], L[4][-1]]
+print(N)
 
 print("end of 1") # set breakpoint here 
 '''
@@ -155,8 +164,29 @@ print("start of part 2") # set breakpoint here
 s = "Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects."
 # your code here
 
+#1st attempt - attempted to use formatting to split sentences 
+#print(s{.end="."}.format()) -- did not work 
+
+#2nd attempt -trying to use for loops 
+#for x in s:
+    #if x end= "."
+    #print(x) #second attempt, did not work.
+
+#3rd attempt - trying to use slice, realized slice can only be used with int  
+#print(s["Python":"."])
+
+#4th attempt. 
+#a = """s"""
+#print(a)
+
+#5th attempt
+
+print(list(s))
+
 print("end of 2") # set breakpoint here 
 '''
+
+
 
 
 
@@ -203,14 +233,70 @@ for e in sentence_list:
 # GENERAL-PURPOSE
 # programming
 # LANGUAGE
-print("start of part 3") # set breakpoint here
+#print("start of part 3") # set breakpoint here
 # your code here
 
+s = "Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects."
 
-print("end of 3") # set breakpoint here 
+
+#1st attempt - using for loop
+#for t in s:
+    #print(t)
+
+
+#2nd attempt - split + range 
+#s.split()
+#l = s.split()
+#print(l)
+#for num in range(3,-1,2): #pretty sure this part is not correct
+    #print(num)
+
+
+#3rd attempt 
+#s.split()
+#l = s.split()
+#print(l.upper())  #.upper is for strings, not list
+
+#4th attempt 
+#l = s.split()
+#a = print(l[::2])
+#a = ['Python', 'an', 'high-level,', 'programming', 'Created', 'Guido', 'Rossum', 'first', 'in', "Python's", 'philosophy', 'code', 'with', 'notable', 'of', 'whitespace.', 'language', 'and', 'approach', 'to', 'programmers', 'clear,', 'code', 'small', 'large-scale']
+#text_file = print("\n".join(a))
+#type(text_file) #it would not let me run .upper directly so I had to check the type, it's showing NoneType.
+
+#5th attempt 
+#l = s.split()
+#a = print(l[::2])
+#a = ['Python', 'an', 'high-level,', 'programming', 'Created', 'Guido', 'Rossum', 'first', 'in', "Python's", 'philosophy', 'code', 'with', 'notable', 'of', 'whitespace.', 'language', 'and', 'approach', 'to', 'programmers', 'clear,', 'code', 'small', 'large-scale']
+#b = [a[0],a[1],a[2][0:10],a[3],a[4],a[5],a[6],a[7],a[8],a[9],a[10],a[11],a[12],a[13],a[14],a[15][0:10],a[16],a[17],a[18],a[19],a[20],a[21][0:5],a[22],a[23],a[24]]
+#print(b)
+#print("\n".join(b))
+
+#e = print("\n".join(b))
+
+#print(e.upper()) #tired structure data by getting rid of "," and ".", still says NoneType.
+
+
+#6th attempt BOOLEAN! with for loop
+
+split_words = s.split()
+print(split_words)
+t = True
+for i in split_words:
+    if t == True:
+        print(i.replace(",","").replace(".",""))
+        t = False
+    else:
+        print(i.upper().replace(".","").replace(",",""))
+        t = True
+    
+
+
+
+
+
+#print("end of 3") # set breakpoint here 
 '''
-
-
 
 
 
