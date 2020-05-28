@@ -25,8 +25,11 @@
 # Task: get the user's name with input() and print out Hello <name>
 #print("start of part 0") # set breakpoint here
 # your code here
+
+'''
 user_name = input("Enter your name here")
-print("Hi " + user_name +"!")
+print("Hi " + user_name +"!") #attempted run .py to output as txt however it would not run pass this line, I wonder if input does not show correctly 
+'''
 
 #print("end of 0") # set breakpoint here 
 '''
@@ -103,11 +106,11 @@ print("Hello", name)
 L = [0, [], [1,2,3,4], [[5],[6,7]], [8,9,10]]
 print(L)
 # your code
-
+'''
 #1st attempt - N = [L[0], L[2][1],L[2][2],[[L[3][0][0], L[3][1][0]], L[4][0], L[4][-1]]
 # print(N)
 # -attempted to write out entire list in one line, not sure if this is it but the list within the list is hard to slice. 
-
+'''
 a = [L[3][0][0], L[3][1][0]]
 print(a)
 N = [L[0], L[2][1],L[2][2], a, L[4][0], L[4][-1]]
@@ -163,7 +166,7 @@ print(newL) # [0, 2, 3, [5, 6], 8, 10]
 #print("start of part 2") # set breakpoint here
 s = "Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects."
 # your code here
-
+'''
 #1st attempt - attempted to use formatting to split sentences 
 #print(s{.end="."}.format()) -- did not work 
 
@@ -180,7 +183,7 @@ s = "Python is an interpreted, high-level, general-purpose programming language.
 #print(a)
 
 #5th attempt
-
+'''
 sen = s.split(".")
 print(sen)
 
@@ -242,7 +245,7 @@ for e in sentence_list:
 
 s = "Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects."
 
-
+'''
 #1st attempt - using for loop
 #for t in s:
     #print(t)
@@ -280,7 +283,7 @@ s = "Python is an interpreted, high-level, general-purpose programming language.
 
 #print(e.upper()) #tired structure data by getting rid of "," and ".", still says NoneType.
 
-
+'''
 #6th attempt BOOLEAN! with for loop
 
 split_words = s.split()
@@ -369,16 +372,17 @@ for w in words:
 # result would not be longer than s!
 # call your function a couple of times with different parameters and also test edge cases
 #print("start of part 4") # set breakpoint here
-" # a long string
+ # a long string
 filler = "..."
 # your code here
+'''
 #x = 5
 # print(s[0:5] + filler + s[-6:-1]) - end indexing is not correct 
 
 
 #x = 5
 #print(s[0:5] + filler + s[-5:]) - this one is correct 
-
+'''
 
 for x in range(5,15):
     if x * 2 + len(filler) > len(s):
@@ -387,7 +391,7 @@ for x in range(5,15):
         abbr = (s[0:x] + filler + s[-x:])
         print(x,abbr)
 
-
+'''
 #optional portion 
 #s = "A very long description
 #def abbr_s = (s, filler="...", total_width=15):
@@ -395,7 +399,7 @@ for x in range(5,15):
     #abbr_s() 
     
 #attempted but still need more knowledge on function overall to be able to pull this off
-
+'''
 #print("end of 4") # set breakpoint here 
 '''
 
@@ -442,7 +446,7 @@ for x in range(5, 15):
 
 
 def abbr(s, filler="...", total_width=15):
-    '''returns a copy of s abbreviated to total_width with filler in the middle''' 
+    #returns a copy of s abbreviated to total_width with filler in the middle
     x = total_width // 2 # integer division
     rem = total_width % 2 # remainder will be 1 if width is odd
     abb_str = s[0:x+rem] + filler + s[-x:] # for odd width, add one to front
