@@ -175,7 +175,7 @@ s = "Python is an interpreted, high-level, general-purpose programming language.
 #3rd attempt - trying to use slice, realized slice can only be used with int  
 #print(s["Python":"."])
 
-#4th attempt. 
+#4th attempt. Tried to explore the "three quotes" but did not seeem to work
 #a = """s"""
 #print(a)
 
@@ -259,7 +259,7 @@ s = "Python is an interpreted, high-level, general-purpose programming language.
 #3rd attempt 
 #s.split()
 #l = s.split()
-#print(l.upper())  #.upper is for strings, not list
+#print(l.upper())  #realzied that .upper is for strings, not list
 
 #4th attempt 
 #l = s.split()
@@ -392,7 +392,9 @@ for x in range(5,15):
 #s = "A very long description
 #def abbr_s = (s, filler="...", total_width=15):
     #print(s[0:x] + filler + s[-x:])
-    #abbr_s()
+    #abbr_s() 
+    
+#attempted but still need more knowledge on function overall to be able to pull this off
 
 #print("end of 4") # set breakpoint here 
 '''
