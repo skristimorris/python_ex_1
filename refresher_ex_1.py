@@ -99,7 +99,7 @@ print("Hello", name)
 # You need to do something similar but end up with [0,2,3,[5,6],8,10] instead. One way to work 
 # through this is to break the process down in small steps, store result of each step in a new variable
 # and use those variables in the next step
-print("start of part 1") # set breakpoint here
+#print("start of part 1") # set breakpoint here
 L = [0, [], [1,2,3,4], [[5],[6,7]], [8,9,10]]
 print(L)
 # your code
@@ -113,7 +113,7 @@ print(a)
 N = [L[0], L[2][1],L[2][2], a, L[4][0], L[4][-1]]
 print(N)
 
-print("end of 1") # set breakpoint here 
+#print("end of 1") # set breakpoint here 
 '''
 
 
@@ -160,7 +160,7 @@ print(newL) # [0, 2, 3, [5, 6], 8, 10]
 # Python is an interpreted, high-level, general-purpose programming language
 #  Created by Guido van Rossum and first released in 1991, Python ...
 #  Its language constructs and object-oriented approach aim to help programmers ...
-print("start of part 2") # set breakpoint here
+#print("start of part 2") # set breakpoint here
 s = "Python is an interpreted, high-level, general-purpose programming language. Created by Guido van Rossum and first released in 1991, Python's design philosophy emphasizes code readability with its notable use of significant whitespace. Its language constructs and object-oriented approach aim to help programmers write clear, logical code for small and large-scale projects."
 # your code here
 
@@ -181,9 +181,13 @@ s = "Python is an interpreted, high-level, general-purpose programming language.
 
 #5th attempt
 
-print(list(s))
+sen = s.split(".")
+print(sen)
 
-print("end of 2") # set breakpoint here 
+for l in sen:
+    print(l)
+
+#print("end of 2") # set breakpoint here 
 '''
 
 
@@ -365,10 +369,30 @@ for w in words:
 # result would not be longer than s!
 # call your function a couple of times with different parameters and also test edge cases
 print("start of part 4") # set breakpoint here
-s = "A very long description" # a long string
+" # a long string
 filler = "..."
 # your code here
+#x = 5
+# print(s[0:5] + filler + s[-6:-1]) - end indexing is not correct 
 
+
+#x = 5
+#print(s[0:5] + filler + s[-5:]) - this one is correct 
+
+
+for x in range(5,15):
+    if x * 2 + len(filler) > len(s):
+        print(x, s)
+    else:
+        abbr = (s[0:x] + filler + s[-x:])
+        print(x,abbr)
+
+
+#optional portion 
+#s = "A very long description
+#def abbr_s = (s, filler="...", total_width=15):
+    #print(s[0:x] + filler + s[-x:])
+    #abbr_s()
 
 print("end of 4") # set breakpoint here 
 '''
