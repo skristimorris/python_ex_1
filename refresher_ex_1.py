@@ -29,6 +29,7 @@
 '''
 user_name = input("Enter your name here")
 print("Hi " + user_name +"!") #attempted run .py to output as txt however it would not run pass this line, I wonder if input does not show correctly 
+# CH: yes, my bad, this will wait for input so you'd have to comment it out for the > thing to run. I didn't think about that! 
 '''
 
 #print("end of 0") # set breakpoint here 
@@ -110,6 +111,7 @@ print(L)
 #1st attempt - N = [L[0], L[2][1],L[2][2],[[L[3][0][0], L[3][1][0]], L[4][0], L[4][-1]]
 # print(N)
 # -attempted to write out entire list in one line, not sure if this is it but the list within the list is hard to slice. 
+# CH it's always advisable to break down things if needed. Don't be affraid to have lots of "helper" vars!
 '''
 a = [L[3][0][0], L[3][1][0]]
 print(a)
@@ -290,6 +292,11 @@ split_words = s.split()
 print(split_words)
 t = True
 for i in split_words:
+    # CH: as the 2 replaces have to be done for both True/False cases,
+    # it's better to do this here
+    # this also would alow you to have more replaces e.g. maybe you get a list of puntuation chars
+    # and need to run through a battery of replaces in a for loop ...
+    
     if t == True:
         print(i.replace(",","").replace(".",""))
         t = False
@@ -372,7 +379,8 @@ for w in words:
 # result would not be longer than s!
 # call your function a couple of times with different parameters and also test edge cases
 #print("start of part 4") # set breakpoint here
- # a long string
+# a long string
+s = "A very long description"
 filler = "..."
 # your code here
 '''
@@ -391,6 +399,9 @@ for x in range(5,15):
         abbr = (s[0:x] + filler + s[-x:])
         print(x,abbr)
 
+# CH: very good! Now try to not use 5 and 15 and that specific string but rather the the len() of a string and work out those 2
+# numbers from that. After that it should work with say s="An even longer description, yes, very long, indeed!"  
+        
 '''
 #optional portion 
 #s = "A very long description
@@ -399,6 +410,8 @@ for x in range(5,15):
     #abbr_s() 
     
 #attempted but still need more knowledge on function overall to be able to pull this off
+
+# CH: maybe do this now, after we've had a lecture on functions?
 '''
 #print("end of 4") # set breakpoint here 
 '''
