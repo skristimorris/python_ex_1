@@ -27,6 +27,9 @@
 print("start of part 0") # set breakpoint here
 # your code here
 
+a = "Kristi"
+print("Hello " + a) # my initial go at it - looks like i appended my variable to the string
+print("Hello", a) # took a peak at your solution and tried it out
 
 print("end of 0") # set breakpoint here 
 '''
