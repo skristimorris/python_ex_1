@@ -112,6 +112,10 @@ L = [0, [], [1,2,3,4], [[5],[6,7]], [8,9,10]]
 print(L)
 # your code
 
+A = L[0] # index the 0
+
+N = [A] # set variable N to a list that contains each variable
+print(N)
 
 print("end of 1") # set breakpoint here 
 '''
