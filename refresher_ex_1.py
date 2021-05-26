@@ -113,8 +113,19 @@ print(L)
 # your code
 
 A = L[0] # index the 0
+#print(A)
 
-N = [A] # set variable N to a list that contains each variable
+#B = L[2][1:3] # output -> [2,3]
+#B = L[2][1], L[2][2] # output -> (2,3)
+B = L[2][1] # index the 2 out of [1,2,3,4]
+#print(B)
+
+C = L[2][2] # index the 3 out of [1,2,3,4]
+#print(C)
+
+
+
+N = [A, B, C] # set variable N to a list that contains each variable
 print(N)
 
 print("end of 1") # set breakpoint here 
