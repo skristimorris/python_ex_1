@@ -113,20 +113,26 @@ print(L)
 # your code
 
 A = L[0] # index the 0
-#print(A)
+#print(A) # print to verify output
 
 #B = L[2][1:3] # output -> [2,3]
 #B = L[2][1], L[2][2] # output -> (2,3)
 B = L[2][1] # index the 2 out of [1,2,3,4]
-#print(B)
+#print(B) # print to verify output
 
 C = L[2][2] # index the 3 out of [1,2,3,4]
-#print(C)
+#print(C) # print to verify output
 
 D = L[3][0] + L[3][1][:1] # index the 5 out of the nested list [[5],[6,7]] and index the 6 which is nested in the nested list then concatenate them together
-#print(D)
+#print(D) # print to verify output
 
-N = [A, B, C, D] # set variable N to a list that contains each variable
+E = L[4][0] # index the 8 out of [8,9,10]
+#print(E) # print to verify output
+
+F = L[4][2] # index the 10 out of [8,9,10]
+#print(F) # print to verify output
+
+N = [A, B, C, D, E, F] # set variable N to a list that contains each variable
 print(N)
 
 print("end of 1") # set breakpoint here 
