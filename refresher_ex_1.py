@@ -123,9 +123,10 @@ B = L[2][1] # index the 2 out of [1,2,3,4]
 C = L[2][2] # index the 3 out of [1,2,3,4]
 #print(C)
 
+D = L[3][0] + L[3][1][:1] # index the 5 out of the nested list [[5],[6,7]] and index the 6 which is nested in the nested list then concatenate them together
+#print(D)
 
-
-N = [A, B, C] # set variable N to a list that contains each variable
+N = [A, B, C, D] # set variable N to a list that contains each variable
 print(N)
 
 print("end of 1") # set breakpoint here 
