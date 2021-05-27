@@ -189,6 +189,8 @@ s = "Python is an interpreted, high-level, general-purpose programming language.
 l = s.split(".") # split the strings in variable s into sentences at each period and set to variable l
 l = l[:-1] # remove empty string at end of l by slicing and copying back to l
 print("There are", len(l), "sentences:") # print "There are 3 sentences:"
+for t in l: #for loop to iterate over list l
+    print(t + ".") # print each sentence and add a period at the end
 
 print("end of 2") # set breakpoint here 
 '''
