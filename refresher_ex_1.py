@@ -187,6 +187,8 @@ s = "Python is an interpreted, high-level, general-purpose programming language.
 # your code here
 
 l = s.split(".") # split the strings in variable s into sentences at each period and set to variable l
+l = l[:-1] # remove empty string at end of l by slicing and copying back to l
+
 
 print("end of 2") # set breakpoint here 
 '''
