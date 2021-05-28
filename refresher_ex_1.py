@@ -244,7 +244,7 @@ for e in sentence_list:
 # LANGUAGE
 print("start of part 3") # set breakpoint here
 # your code here
-
+s = s.split() # split sentence into words in a list, output -> ['Python', 'is', 'an', 'interpreted']
 
 print("end of 3") # set breakpoint here 
 '''
