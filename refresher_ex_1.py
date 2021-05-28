@@ -245,6 +245,11 @@ for e in sentence_list:
 print("start of part 3") # set breakpoint here
 # your code here
 s = s.split() # split sentence into words in a list, output -> ['Python', 'is', 'an', 'interpreted']
+for i, t in enumerate(s): # for every word (t) in list (s), enumerate list to get index values (i) and list value (t) for each item in the list
+    if i % 2 == 0: # if index value remainder = 0
+        print(t.replace(',', '').replace('.', '')) # print t and replace all periods or commas in the string with nothing
+    else: # if index value remainder does not = 0
+        print(t.upper().replace(',', '').replace('.', '')) # print t in capital letters and replace all periods or commas in the string with nothing
 
 print("end of 3") # set breakpoint here 
 '''
