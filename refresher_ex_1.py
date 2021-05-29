@@ -327,6 +327,9 @@ s = "A very long description" # a long string
 filler = "..."
 # your code here
 
+l_filler = len(filler) # obtains the length of the filler string
+s_length = len(s) # obtains the length of the string
+fill_char = filler[0] # obtains the filler character
 
 print("end of 4") # set breakpoint here 
 '''
