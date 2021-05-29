@@ -330,6 +330,14 @@ filler = "..."
 l_filler = len(filler) # obtains the length of the filler string
 s_length = len(s) # obtains the length of the string
 fill_char = filler[0] # obtains the filler character
+for x in range(5, 15): # for loop iterating through range values for x which are 5 as the starting value and 15 as the max ending value
+    if (x + x + l_filler) > s_length: # if the sum of the "x" number * 2 (for beginning and end of s) + filler length is greater than length of s
+        print(x, s) # print the current range value iterating through the loop and the full s string
+    else:
+        a = s[:x] # obtain the "x" number of characters at the beginning of s 
+        b = s[-x:] # obtain the "x" number of characters at the end of s
+        c = a + filler + b # combine characters from beginning with filler and characters from end into string "c"
+        print(x, c) # print the current range value "x" and string "c" iterating through the loop
 
 print("end of 4") # set breakpoint here 
 '''
